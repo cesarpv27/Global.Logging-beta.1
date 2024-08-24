@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<EnablePackageValidation>true</EnablePackageValidation>
+		<IsPackable>true</IsPackable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>$(ProjectName)</Title>
+		<PackageId>$(ProjectName)</PackageId>
+		<Version>0.1.0-beta.1</Version>
+		<Authors>Cesar Palomino Vila</Authors>
+		<Description>This project contains the factory classes that support the Global.Logging NuGet package. This is a beta version and has not been thoroughly tested or recommended for use in production environments. All methods are documented.</Description>
+		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+		<PackageProjectUrl></PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<RepositoryUrl>https://github.com/cesarpv27/Global.Common.Azure.Models-beta.1</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageReleaseNotes>
+			### Added
+			- v0.1.0-beta.1 Global.Logging factory classes.
+			- v0.1.0-beta.1 Global.Common.Features has been updated to Version="0.1.2-beta.1".
+		</PackageReleaseNotes>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+		<ItemGroup>
+			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+		</ItemGroup>
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+		</ItemGroup>
+	</Target>
+
+	<ItemGroup>
+		<None Include="docs\README.md" Pack="true" PackagePath="\"/>
+		<None Include="docs\CHANGELOG.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
+
+	<Target Name="PostPack" AfterTargets="Pack">
+		<Exec Command="set &quot;packages_path=$(ProjectDir)..\..\..\..\LocalNuGetPackages\$(ProjectName)&quot;&#xD;&#xA;if not exist &quot;%25packages_path%25&quot; mkdir &quot;%25packages_path%25&quot;&#xD;&#xA;xcopy &quot;$(ProjectDir)bin\$(Configuration)\*.nupkg&quot; &quot;%25packages_path%25&quot; /C /Y" />
+	</Target>
+
+	<ItemGroup>
+	  <PackageReference Include="Global.Common.Features" Version="0.1.2-beta.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Global.Logging.Domain\Global.Logging.Domain.csproj" PrivateAssets="All" />
+		<ProjectReference Include="..\Global.Logging.Models\Global.Logging.Models.csproj" PrivateAssets="All" />
+	</ItemGroup>
+	
+</Project>

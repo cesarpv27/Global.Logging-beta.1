@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Title>$(ProjectName)</Title>
+	<Version>0.1.0-beta.1</Version>
+	<Authors>Cesar Palomino Vila</Authors>
+	  <Description>This project contains the model classes that support the Global.Logging NuGet package. This is a beta version and has not been thoroughly tested or recommended for use in production environments. All methods are documented.</Description>
+	  <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+	  <Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <PackageReleaseNotes>
+		  ### Added
+		  - v0.1.0-beta.1 Global.Logging model classes.
+	  </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Global.Common.Azure.Models" Version="0.1.1-beta.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Global.Logging.Domain\Global.Logging.Domain.csproj" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
