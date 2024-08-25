@@ -8,7 +8,7 @@
 		<Nullable>enable</Nullable>
 		<Title>$(ProjectName)</Title>
 		<PackageId>$(ProjectName)</PackageId>
-		<Version>0.1.0-beta.1</Version>
+		<Version>0.1.1-beta.1</Version>
 		<Authors>Cesar Palomino Vila</Authors>
 		<Description>This project contains several features that provide functionalities to logging on the Azure platform. Currently contains functionalities that allow logging to Azure Table Storage and Azure Blob Storage. This is a beta version and has not been thoroughly tested or recommended for use in production environments. All methods are documented.</Description>
 		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
@@ -19,6 +19,15 @@
 		<Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<PackageReleaseNotes>
+			### Fixed
+			- v0.1.1-beta.1 The nuget package 'Azure.Data.Tables' has been updated to version="12.9.0".
+			- v0.1.1-beta.1 The nuget package 'Global.Common.Azure.Models' has been updated to version="0.1.2-beta.1".
+			- v0.1.1-beta.1 The nuget package 'Global.Logging.Factories' has been updated to version="0.1.1-beta.1".
+			- v0.1.1-beta.1 The nuget package 'Global.Logging.Infrastructure' has been updated to version="0.1.1-beta.1".
+			- v0.1.1-beta.1 The nuget package 'Global.Logging.Services' has been updated to version="0.1.3-beta.1".
+			- v0.1.1-beta.1 The nuget package 'Microsoft.Extensions.DependencyInjection.Abstractions' has been updated to version="9.0.0-preview.7.24405.7".
+			- v0.1.1-beta.1 The nuget package 'Microsoft.Extensions.Options' has been updated to version="9.0.0-preview.7.24405.7".
+
 			### Added
 			- v0.1.0-beta.1 Includes logging functionalities that enable logging to Azure Table Storage and Azure Blob Storage.
 		</PackageReleaseNotes>
@@ -34,13 +43,13 @@
 	</Target>
 
 	<ItemGroup>
-		<PackageReference Include="Azure.Data.Tables" Version="12.8.3" />
-		<PackageReference Include="Global.Common.Azure.Models" Version="0.1.1-beta.1" />
-		<PackageReference Include="Global.Logging.Factories" Version="0.1.0-beta.1" />
-		<PackageReference Include="Global.Logging.Infrastructure" Version="0.1.0-beta.1" />
-		<PackageReference Include="Global.Logging.Services" Version="0.1.2-beta.1" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+		<PackageReference Include="Azure.Data.Tables" Version="12.9.0" />
+		<PackageReference Include="Global.Common.Azure.Models" Version="0.1.2-beta.1" />
+		<PackageReference Include="Global.Logging.Factories" Version="0.1.1-beta.1" />
+		<PackageReference Include="Global.Logging.Infrastructure" Version="0.1.1-beta.1" />
+		<PackageReference Include="Global.Logging.Services" Version="0.1.3-beta.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0-preview.7.24405.7" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0-preview.7.24405.7" />
 	</ItemGroup>
 
 </Project>
