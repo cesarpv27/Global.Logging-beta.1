@@ -8,7 +8,7 @@
 		<Nullable>enable</Nullable>
 		<Title>$(ProjectName)</Title>
 		<PackageId>$(ProjectName)</PackageId>
-		<Version>0.1.2-beta.1</Version>
+		<Version>0.1.3-beta.1</Version>
 		<Authors>Cesar Palomino Vila</Authors>
 		<Description>This project contains the service classes that support the Global.Logging NuGet package. This is a beta version and has not been thoroughly tested or recommended for use in production environments. All methods are documented.</Description>
 		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
@@ -19,6 +19,10 @@
 		<Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<PackageReleaseNotes>
+			### Fixed
+			- v0.1.3-beta.1 The nuget package 'Azure.Data.Tables' has been updated to version="12.9.0" in the secondary project reference 'Global.Logging.Domain'.
+			- v0.1.3-beta.1 The nuget package 'Global.Common.Azure.Models' has been updated to version="0.1.2-beta.1" in the secondary project reference 'Global.Logging.Models'.
+
 			### Fixed
 			- v0.1.2-beta.1 The description has been fixed in the documentation.
 			- v0.1.1-beta.1 The repository URL has been fixed in the documentation.
