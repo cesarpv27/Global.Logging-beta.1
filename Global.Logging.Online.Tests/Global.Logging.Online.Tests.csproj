@@ -4,9 +4,17 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
+	<Version>0.1.1-beta.1</Version>
+	<Authors>Cesar Palomino Vila</Authors>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+	<Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
+	  <PackageReleaseNotes>
+		  ### Fixed
+		  - v0.1.1-beta.1 The nuget package 'Global.Common.Azure.TestBase' has been updated to version="0.1.1-beta.1".
+		  - v0.1.1-beta.1 The nuget package 'Global.Logging' has been updated to version="0.1.1-beta.1".
+		  - v0.1.1-beta.1 The nuget package 'xunit.runner.visualstudio' has been updated to version="2.8.2".
+	  </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,10 +22,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Global.Common.Azure.TestBase" Version="0.1.0-beta.1" />
-    <PackageReference Include="Global.Logging" Version="0.1.0-beta.1" />
+    <PackageReference Include="Global.Common.Azure.TestBase" Version="0.1.1-beta.1" />
+    <PackageReference Include="Global.Logging" Version="0.1.1-beta.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.1">
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
