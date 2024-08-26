@@ -8,9 +8,9 @@
 		<Nullable>enable</Nullable>
 		<Title>$(ProjectName)</Title>
 		<PackageId>$(ProjectName)</PackageId>
-		<Version>0.1.1-beta.1</Version>
+		<Version>0.1.2-beta.1</Version>
 		<Authors>Cesar Palomino Vila</Authors>
-		<Description>This project contains several features that provide functionalities to logging on the Azure platform. Currently contains functionalities that allow logging to Azure Table Storage and Azure Blob Storage. This is a beta version and has not been thoroughly tested or recommended for use in production environments. All methods are documented.</Description>
+		<Description>This project contains several features that provide functionalities to logging on the Azure platform. Currently contains functionalities that allow logging to Azure Table Storage and Azure Blob Storage. This is a beta version and has not been thoroughly tested or recommended for use in production environments. All methods are documented. For additional details and examples, please refer to the repository: https://github.com/cesarpv27/Global.Logging-beta.1.</Description>
 		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
 		<PackageProjectUrl></PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -19,6 +19,9 @@
 		<Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<PackageReleaseNotes>
+			### Added
+			- 0.1.2-beta.1 Added the 'AddGlobalLoggingServicesWithLogFilter' method to support the configuration of custom Global Logging services with a connection string and log filter delegate.
+
 			### Fixed
 			- v0.1.1-beta.1 The nuget package 'Azure.Data.Tables' has been updated to version="12.9.0".
 			- v0.1.1-beta.1 The nuget package 'Global.Common.Azure.Models' has been updated to version="0.1.2-beta.1".

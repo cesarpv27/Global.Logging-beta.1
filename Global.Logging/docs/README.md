@@ -18,4 +18,4 @@ All methods are documented.
 - https://www.nuget.org/packages/Microsoft.Extensions.Options.
 
 # Examples
-For additional examples, see the repository: https://github.com/cesarpv27/Global.Logging-beta.1
+For additional details and examples, please refer to the repository: https://github.com/cesarpv27/Global.Logging-beta.1

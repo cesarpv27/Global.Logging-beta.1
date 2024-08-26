@@ -4,13 +4,13 @@ The 'Global.Logging' NuGet package is intended to provide a logging service that
 
 The 'Global.Logging' NuGet package has several capabilities:
 
-. Integration with .NET dependency injection.
-. Optionally allows customization of the table name, blob container name, blob name, and the generation of partition key and row key names, depending on the target logging storage.
-. Flexibility and adaptability to customize the logging service with filters, entity classes, factory classes, and more, including the logging service class itself.
-. The labeled verbose capability allows for defining up to 10 additional fields in the stored entity, with the option to customize the source of the stored data based on the received 'verbose' parameter.
-. Provides thread-safe capability to ensure reliable multithreading operations.
-. Detailed responses.
-. Retries options.
+1. Integration with .NET dependency injection.
+2. Optionally allows customization of the table name, blob container name, blob name, and the generation of partition key and row key names, depending on the target logging storage.
+3. Flexibility and adaptability to customize the logging service with filters, entity classes, factory classes, and more, including the logging service class itself.
+4. The labeled verbose capability allows for defining up to 10 additional fields in the stored entity, with the option to customize the source of the stored data based on the received 'verbose' parameter.
+5. Provides thread-safe capability to ensure reliable multithreading operations.
+6. Detailed responses.
+7. Retries options.
 
 Let's talk through examples.
 
