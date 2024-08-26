@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<Version>0.1.1-beta.1</Version>
+	<Version>0.1.2-beta.1</Version>
 	<Authors>Cesar Palomino Vila</Authors>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
@@ -23,7 +23,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Global.Common.Azure.TestBase" Version="0.1.1-beta.1" />
-    <PackageReference Include="Global.Logging" Version="0.1.1-beta.1" />
+    <PackageReference Include="Global.Logging" Version="0.1.2-beta.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
       <PrivateAssets>all</PrivateAssets>
