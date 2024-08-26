@@ -11,6 +11,9 @@
 	<Copyright>Copyright (c) 2024 Cesar Palomino Vila. Licensed under the BSD-3-Clause.</Copyright>
 	  <PackageReleaseNotes>
 		  ### Fixed
+		  - v0.1.2-beta.1 The nuget package 'Global.Logging' has been updated to version="0.1.2-beta.1".
+
+		  ### Fixed
 		  - v0.1.1-beta.1 The nuget package 'Global.Common.Azure.TestBase' has been updated to version="0.1.1-beta.1".
 		  - v0.1.1-beta.1 The nuget package 'Global.Logging' has been updated to version="0.1.1-beta.1".
 		  - v0.1.1-beta.1 The nuget package 'xunit.runner.visualstudio' has been updated to version="2.8.2".
