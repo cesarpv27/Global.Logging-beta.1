@@ -48,6 +48,37 @@ namespace Global.Logging.Extensions
         }
 
         /// <summary>
+        /// Adds a custom Global Logging services configuration to the specified <see cref="IServiceCollection"/> 
+        /// using the connection string retrieved from the <paramref name="getConnectionString"/> and a delegate 
+        /// that creates the <see cref="AzSeverityLevelLogFilter{ReadOnlyRawLog, ReadOnlyLog}"/> instance.
+        /// </summary>
+        /// <param name="services">The service collection to add the Global Logging services to.</param>
+        /// <param name="getConnectionString">A function to get the connection string from the Service Provider.</param>
+        /// <param name="getAzSeverityLevelLogFilter">A delegate that provides an instance of <see cref="AzSeverityLevelLogFilter{ReadOnlyRawLog, ReadOnlyLog}"/>.</param>
+        /// <returns>The updated <see cref="IServiceCollection"/>.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when <paramref name="services"/> or <paramref name="getConnectionString"/> are null.</exception>
+        /// <exception cref="ArgumentException">Thrown when the connection string retrieved from the <paramref name="getConnectionString"/> 
+        /// is null, empty, or consists only of white-space characters.</exception>
+        public static IServiceCollection AddGlobalLoggingServicesWithLogFilter(
+            this IServiceCollection services,
+            Func<IServiceProvider, string> getConnectionString,
+            Func<AzSeverityLevelLogFilter<ReadOnlyRawLog<Exception>, ReadOnlyLog>> getAzSeverityLevelLogFilter)
+        {
+            AssertHelper.AssertNotNullOrThrow(services, nameof(services));
+            AssertHelper.AssertNotNullOrThrow(getAzSeverityLevelLogFilter, nameof(getAzSeverityLevelLogFilter));
+
+            services.AddTransient<IAzLogFilter<ReadOnlyRawLog<Exception>, ReadOnlyLog>, AzSeverityLevelLogFilter<ReadOnlyRawLog<Exception>, ReadOnlyLog>>(
+                sp =>
+                {
+                    return getAzSeverityLevelLogFilter();
+                });
+
+            services.AddDefaultGlobalLoggingServices(getConnectionString);
+
+            return services;
+        }
+
+        /// <summary>
         /// Provides a connection string using lazy initialization.
         /// </summary>
         class ConnectionStringProvider
